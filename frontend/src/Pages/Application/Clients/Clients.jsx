@@ -27,8 +27,7 @@ const Clients = () => {
   const token = localStorage.getItem("psc_app_token");
   const clientsData = () => {
     try {
-      return axios
-        .get(`http://localhost:8000/client`, {
+      return axios.get(`http://localhost:8000/client`, {
           headers: {
             Authorization: `Bearer ${token}`,
           }
@@ -42,8 +41,7 @@ const Clients = () => {
     }
   };
   const handleDelete = (id) => {
-    axios
-      .delete(`http://localhost:8000/client/delete/${id}`, {
+    axios.delete(`http://localhost:8000/client/delete/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         }

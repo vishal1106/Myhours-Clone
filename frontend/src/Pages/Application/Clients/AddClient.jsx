@@ -28,9 +28,8 @@ const AddClient = () => {
   };
   const postData = (client) => {
     const token = localStorage.getItem("psc_app_token");
-    console.log(token);
-    return axios
-      .post("http://localhost:8000/client/create", client, {
+    console.log(client);
+    return axios.post("http://localhost:8000/client/create", client, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

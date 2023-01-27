@@ -11,23 +11,13 @@ const Teamuser = () => {
     // ! DYNAMIC DATA :
     const [data, setData] = useState([]);
 
-    // ! DYNAMIC others PROVIDED logic
-    // useEffect(() =>{
-    //     getData();
-
-    // } , []);
-
-    // const getData = async () =>{
-    //     const r = await axios("https://masaihours.herokuapp.com/teamMember/teamMemberdata");
-    //     setData(r.data);
-    // }
-
+   
 
     const token = localStorage.getItem("psc_app_token")
     console.log(token)
 
     const getData = () => {
-        fetch("http://localhost:8000/teammember", {
+        fetch("https://myhours-api.onrender.com/teammember", {
             method: "GET",
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -45,7 +35,7 @@ const Teamuser = () => {
     
     const handleDelete = (id) => {
         axios
-          .delete(`http://localhost:8000/teammember/delete/${id}`, {
+          .delete(`https://myhours-api.onrender.com/delete/${id}`, {
             headers: {
               Authorization: `Bearer ${token}`,
             }

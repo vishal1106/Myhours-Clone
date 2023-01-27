@@ -46,7 +46,7 @@ const Teamform = () => {
         const token = localStorage.getItem("psc_app_token");
         console.log(token);
         return axios
-            .post("http://localhost:8000/teammember/create", member, {
+            .post("https://myhours-api.onrender.com/teammember/create", member, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },

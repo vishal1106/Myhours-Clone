@@ -17,9 +17,9 @@ const Addteam = () => {
 
   const postData = (team) => {
     const token = localStorage.getItem("psc_app_token");
-    console.log(token);
+   
     return axios
-      .post("https://fierce-headland-49726.herokuapp.com/team/create", team, {
+      .post("https://myhours-api.onrender.com/team/create", team, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

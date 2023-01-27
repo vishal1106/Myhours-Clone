@@ -14,8 +14,6 @@ const clientSchema = new mongoose.Schema({
     tax_percentage: String,
     tax_number:Number ,
     userId : {type : String, required : true}
-},{
-    versionKey:false
 })
 
 const clientModel = mongoose.model("Client", clientSchema )

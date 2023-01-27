@@ -13,7 +13,7 @@ const Allteam = () => {
     const getData = () => {
       try {
         return axios
-          .get(`https://fierce-headland-49726.herokuapp.com/team`, {
+          .get(`https://myhours-api.onrender.com/team`, {
             headers: {
               Authorization: `Bearer ${token}`,
             }
@@ -29,7 +29,7 @@ const Allteam = () => {
 
     const handleDelete = (id) => {
         axios
-          .delete(`https://fierce-headland-49726.herokuapp.com/team/delete/${id}`, {
+          .delete(`https://myhours-api.onrender.com/team/delete/${id}`, {
             headers: {
               Authorization: `Bearer ${token}`,
             }
@@ -50,28 +50,6 @@ const Allteam = () => {
 
       
 
-// ! DYNAMIC DATA : (Previos)
-// const [data , setData ] = useState([]);
-// useEffect(() =>{
-//     getData();
-    
-// } , []);
-
-// const getData = async () =>{
-//     const r = await axios("https://masaihours.herokuapp.com/teamMember/teamMemberdata");
-//     setData(r.data);
-     
-// }
-
-
-// ! STATIC DATA :
-// const data = [
-//     {"_id": "6307ac5c6e61dce47a2beaa6", teamsize: 3 },
-//     {"_id": "6307ac5c6e61Tushar", teamsize: 6},
-//     { "_id": "6307ac5c6e61Nilesh", teamsize: 9},
-//     { "_id": "6307ac5c6e61Akash", teamsize: 5},
-//     {"_id": "6307ac5c6e6Satish", teamsize: 2},
-// ]
 
   return (
      <>
