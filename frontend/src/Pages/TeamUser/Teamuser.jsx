@@ -17,7 +17,7 @@ const Teamuser = () => {
     console.log(token)
 
     const getData = () => {
-        fetch("https://myhours-api.onrender.com/teammember", {
+        fetch("http://localhost:8000/teammember", {
             method: "GET",
             headers: {
                 'Authorization': `Bearer ${token}`
@@ -35,7 +35,7 @@ const Teamuser = () => {
     
     const handleDelete = (id) => {
         axios
-          .delete(`https://myhours-api.onrender.com/delete/${id}`, {
+          .delete(`http://localhost:8000/delete/${id}`, {
             headers: {
               Authorization: `Bearer ${token}`,
             }

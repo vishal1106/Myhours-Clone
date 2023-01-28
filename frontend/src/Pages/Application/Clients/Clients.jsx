@@ -20,20 +20,47 @@ import { TiDownloadOutline } from "react-icons/ti";
 import axios from "axios";
 import Client from "./Client";
 
+// const clients = [
+//   {
+//     id: 1,
+//     name: "Hisamuddin",
+//     contact_person: "Hisam",
+//     email: "Hisam@gmail.com",
+//   },
+//   {
+//     id: 2,
+//     name: "Hisamuddin",
+//     contact_person: "Hisam",
+//     email: "Hisam@gmail.com",
+//   },
+//   {
+//     id: 3,
+//     name: "Hisamuddin",
+//     contact_person: "Hisam",
+//     email: "Hisam@gmail.com",
+//   },
+//   {
+//     id: 4,
+//     name: "Hisamuddin",
+//     contact_person: "Hisam",
+//     email: "Hisam@gmail.com",
+//   },
+// ];
 
 
 const Clients = () => {
   const [clients, setClients] = useState([]);
   const token = localStorage.getItem("psc_app_token");
-  const clientsData = () => {
+ const clientsData = () => {
     try {
-      return axios.get(`http://localhost:8000/client`, {
+      return axios
+        .get(`https://myhours-api.onrender.com/client`, {
           headers: {
             Authorization: `Bearer ${token}`,
           }
         })
         .then((r) => {
-          console.log(r.data);
+          console.log("ddddd",r.data);
           setClients(r.data);
         });
     } catch (err) {
@@ -41,7 +68,8 @@ const Clients = () => {
     }
   };
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:8000/client/delete/${id}`, {
+    axios
+      .delete(`https://myhours-api.onrender.com/client/delete/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         }
@@ -52,6 +80,11 @@ const Clients = () => {
       .catch((err) => console.error(err));
   };
 
+  // // const search = async(data)=>{
+  // //   await axios.get(`http://localhost:4040/`)
+  // //   .then((res) =>setClients(res.data) )
+  // //   .catch((err) => console.log(err))
+  // // }
 
   useEffect(() => {
     clientsData();
@@ -109,11 +142,11 @@ const Clients = () => {
           <Table size="md">
             <Thead borderBottom="2px solid lightGray" fontSize="lg">
               <Tr>
-                <Th w={"30%"} fontWeight="500" fontSize="15">
+                <Th w={"50%"} fontWeight="500" fontSize="15">
                   NAME <ArrowUpIcon boxSize="5" mb="1" />
                 </Th>
                 <Th fontWeight="500" fontSize="15">
-                CONTACT PERSON 
+                  CONTACT PERSON
                 </Th>
                 <Th fontWeight="500" fontSize="15">
                   CONTACT DETAIL

@@ -23,7 +23,7 @@ app.get("/" , (req,res) =>{
 
 app.use(cors());
 app.use("/user" , userController);
-// app.use(authentication)
+app.use(authentication)
 app.use("/team", teamController)
 app.use("/teammember", teamMemberController)
 app.use("/client", clientController)

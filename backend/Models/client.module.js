@@ -11,7 +11,7 @@ const clientSchema = new mongoose.Schema({
     phone: Number,
     address:String,
     tax_name: String,
-    tax_percentage: String,
+    tax_percentage: Number,
     tax_number:Number ,
     userId : {type : String, required : true}
 })

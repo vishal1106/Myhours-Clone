@@ -30,8 +30,8 @@ const EditClient = () => {
   };  
 
   const getData = async () => {
-    console.log(form);
-    const res = await axios.get(`http://localhost:8000/client/${id}`,{
+    // console.log(form);
+    const res = await axios.get(`https://myhours-api.onrender.com/client/${id}`,{
           headers: {
             Authorization: `Bearer ${token}`,
           }},);
@@ -39,8 +39,8 @@ const EditClient = () => {
   };
 
   const handlePatch = async () => {
-    console.log(form);
-    await axios.patch(`http://localhost:8000/client/edit/${id}`, form,{
+    
+    await axios.patch(`https://myhours-api.onrender.com/client/edit/${id}`, form,{
         headers: {
           Authorization: `Bearer ${token}`,
         }

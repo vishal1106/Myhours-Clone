@@ -13,7 +13,7 @@ const Allteam = () => {
     const getData = () => {
       try {
         return axios
-          .get(`https://myhours-api.onrender.com/team`, {
+          .get(`http://localhost:8000/team`, {
             headers: {
               Authorization: `Bearer ${token}`,
             }
@@ -29,7 +29,7 @@ const Allteam = () => {
 
     const handleDelete = (id) => {
         axios
-          .delete(`https://myhours-api.onrender.com/team/delete/${id}`, {
+          .delete(`http://localhost:8000/team/delete/${id}`, {
             headers: {
               Authorization: `Bearer ${token}`,
             }

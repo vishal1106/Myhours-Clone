@@ -50,7 +50,7 @@ const SignUp = () => {
     setName("");
     setEmail("");
     setPassword("");
-    await fetch("https://myhours-api.onrender.com/user/signup", {
+    await fetch("http://localhost:8000/user/signup", {
       method: "POST",
       headers: {
         "content-type": "application/json",

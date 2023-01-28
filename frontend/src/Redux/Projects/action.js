@@ -24,7 +24,7 @@ export const getProjectError = () => {
 export const getProject = (dispatch) => {
     const token = localStorage.getItem("psc_app_token");
     dispatch(getProjectRequest());
-    axios.get("https://myhours-api.onrender.com/project", {
+    axios.get("http://localhost:8000/project", {
         headers: {
           Authorization: `Bearer ${token}`,
         }
@@ -58,7 +58,7 @@ export const addProject = (payload) => (dispatch) => {
     const token = localStorage.getItem("psc_app_token");
     dispatch(addProjectRequest());
     return axios
-      .post(`https://myhours-api.onrender.com/project/create`, payload, {
+      .post(`http://localhost:8000/project/create`, payload, {
         
         // body: payload,
         headers: {

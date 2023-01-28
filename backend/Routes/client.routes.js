@@ -10,7 +10,6 @@ clientController.get("/", async (req, res) => {
     userId: req.body.userId,
  
   });
-  console.log(client)
   res.send(client);
 });
 
@@ -25,7 +24,8 @@ clientController.get("/:id", async (req, res) => {
 
 clientController.post("/create", async (req, res) => {
   const { name, contact_person, email, phone, address, tax_name, tax_percentage, tax_number, userId } = req.body;
-  const client = new clientModel({
+
+  const newclient = new clientModel({
     name,
     contact_person,
     email,
@@ -36,13 +36,16 @@ clientController.post("/create", async (req, res) => {
     tax_number ,
     userId 
   });
-  
+console.log(newclient)
   try {
-     let x=await client.save();
+    
+     await newclient.save()
     res.send("Client is created");
-    console.log(x)
+    console.log("client is created")
+   
   } catch (err) {
-    res.send("something went wrong");
+    res.send("Client validation is wrong");
+ console.log("dddddd")
   }
 });
 

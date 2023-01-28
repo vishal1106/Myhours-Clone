@@ -8,9 +8,11 @@ import {
   Heading,
   HStack,
   Input,
+  InputGroup,
+  InputLeftElement,
   Textarea,
 } from "@chakra-ui/react";
-import { QuestionOutlineIcon } from "@chakra-ui/icons";
+import { PhoneIcon, QuestionOutlineIcon } from "@chakra-ui/icons";
 
 import Sidebar from "../Sidebar/Sidebar";
 import { useNavigate } from "react-router-dom";
@@ -28,14 +30,15 @@ const AddClient = () => {
   };
   const postData = (client) => {
     const token = localStorage.getItem("psc_app_token");
-    console.log(client);
-    return axios.post("http://localhost:8000/client/create", client, {
+    console.log(token);
+    return axios
+      .post("https://myhours-api.onrender.com/client/create", client, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       })
       .then((r) => {
-        console.log(r.data);
+        
         alert("Client added successfully");
       })
       .catch((err) => console.log("err",err));
@@ -62,9 +65,11 @@ const AddClient = () => {
           </FormLabel>
           <Input
             onChange={handleChange}
+            
             w="100%"
             variant="outline"
             name="name"
+            placeholder='Name should be String'
           ></Input>
           <FormLabel fontSize="12px" mt="1rem" color="gray.600">
             CONTACT PERSON
@@ -74,6 +79,7 @@ const AddClient = () => {
             w="100%"
             variant="outline"
             name="contact_person"
+            placeholder='Contact should be String'
           ></Input>
           <FormLabel fontSize="12px" mt="1rem" color="gray.600">
             EMAIL
@@ -84,16 +90,24 @@ const AddClient = () => {
             w="100%"
             variant="outline"
             name="email"
+            placeholder='Email should be String'
           ></Input>
           <FormLabel fontSize="12px" mt="1rem" color="gray.600">
             PHONE
           </FormLabel>
-          <Input
+          {/* <Input
             onChange={handleChange}
             w="100%"
             variant="outline"
             name="phone"
-          ></Input>
+          ></Input> */}
+          <InputGroup>
+    <InputLeftElement
+      pointerEvents='none'
+      children={<PhoneIcon color='gray.300' />}
+    />
+    <Input type='tel' placeholder='Phone number' name="phone"   onChange={handleChange}/>
+  </InputGroup>
           <FormLabel fontSize="12px" mt="1rem" color="gray.600">
             ADDRESS
           </FormLabel>
@@ -103,6 +117,7 @@ const AddClient = () => {
             h="4rem"
             w="100%"
             name="address"
+            placeholder='Adderss should be String'
           ></Textarea>
           <HStack spacing={1} justifyContent="space-betwee6">
             <Box w="46%">
@@ -114,6 +129,7 @@ const AddClient = () => {
                 w="100%"
                 variant="outline"
                 name="tax_name"
+                placeholder='Tax Name should be String'
               ></Input>
             </Box>
             <Box w="46%">
@@ -126,6 +142,7 @@ const AddClient = () => {
                 w="100%"
                 variant="outline"
                 name="tax_percentage"
+                placeholder='Tax Percentage should be Number'
               ></Input>
             </Box>
           </HStack>
@@ -137,6 +154,7 @@ const AddClient = () => {
             w="100%"
             variant="outline"
             name="tax_number"
+            placeholder='Tax Number should be Number'
           ></Input>
           <Button
             fontSize={"lg"}
