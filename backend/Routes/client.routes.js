@@ -41,11 +41,11 @@ console.log(newclient)
     
      await newclient.save()
     res.send("Client is created");
-    console.log("client is created")
+    
    
   } catch (err) {
     res.send("Client validation is wrong");
- console.log("dddddd")
+ 
   }
 });
 

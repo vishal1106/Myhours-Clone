@@ -6,7 +6,7 @@ This Single project is a clone of the [MyHours](https://myhours.com) website. I 
 
 ## Deployed Site
 
-[My Hours clone](/)
+[My Hours clone](https://myhours-app.netlify.app)
 
 ## Presentation Video
 
