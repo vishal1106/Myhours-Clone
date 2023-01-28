@@ -19,7 +19,7 @@ const Addteam = () => {
     const token = localStorage.getItem("psc_app_token");
    
     return axios
-      .post("http://localhost:8000/team/create", team, {
+      .post("https://myhours-api.onrender.com/team/create", team, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
