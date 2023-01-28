@@ -34,14 +34,15 @@ const Teamuser = () => {
 
     
     const handleDelete = (id) => {
-        axios
-          .delete(`https://myhours-api.onrender.com/delete/${id}`, {
+       
+        axios.delete(`https://myhours-api.onrender.com/delete/${id}`, {
             headers: {
               Authorization: `Bearer ${token}`,
             }
           })
-          .then(() => {
+          .then((res) => {
             getData();
+            
           })
           .catch((err) => console.error(err));
       };
@@ -109,7 +110,7 @@ const Teamuser = () => {
                                             <Td fontSize="14" cursor="pointer" _hover={{ fontWeight: 500 }}><Link to={`/edit/${el._id}`}>Edit </Link><EditIcon mb="1" /></Td>
                                             <Td fontSize="14" cursor="pointer" _hover={{ fontWeight: 500 }}
                                             
-                                            > <DeleteIcon/> </Td>
+                                            > <DeleteIcon onClick={()=>handleDelete(el._id)}/> </Td>
                                         </Tr>
                                     ))}
                                 </Tbody>
