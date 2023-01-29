@@ -36,7 +36,7 @@ This Individua project is a clone of the [MyHours](https://myhours.com) website.
 
 - **Landing Page**
 
-  ![Homepage](./image/Homepage.png?raw=true)
+  ![Homepage](../image/Homepage.png?raw=true)
 
 - **Usecase Page**
 
