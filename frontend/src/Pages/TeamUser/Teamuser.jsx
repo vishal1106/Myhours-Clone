@@ -8,7 +8,7 @@ import Sidebar from '../Application/Sidebar/Sidebar';
 
 const Teamuser = () => {
 
-    // ! DYNAMIC DATA :
+   
     const [data, setData] = useState([]);
 
    
