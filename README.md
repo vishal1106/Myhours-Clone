@@ -36,65 +36,63 @@ This Individua project is a clone of the [MyHours](https://myhours.com) website.
 
 - **Landing Page**
 
-  ![Homepage](./Website%20sneak%20peeks/Homepage.png?raw=true)
+  ![Homepage](./image/Homepage.png?raw=true)
 
 - **Usecase Page**
 
-  ![Usecase](./Website%20sneak%20peeks/Usecase.png?raw=true)
+  ![Usecase](./image/Usecase.png?raw=true)
 
 - **Reviews**
 
-  ![Reviews](./Website%20sneak%20peeks/Reviews.png?raw=true)
+  ![Reviews](./image/Reviews.png?raw=true)
 
 - **Pricing Page**
 
-  ![Pricing](./Website%20sneak%20peeks/Pricing.png?raw=true)
+  ![Pricing](./image/Pricing.png?raw=true)
 
 - **Frequently Asked Question**
 
-  ![FAQ](./Website%20sneak%20peeks/FAQ.png?raw=true)
+  ![FAQ](./image/FAQ.png?raw=true)
 
 - **Support**
 
-   ![Support](./Website%20sneak%20peeks/Support.png?raw=true)
+   ![Support](./image/Support.png?raw=true)
 
 - **Signup**
 
-  ![Signup](./Website%20sneak%20peeks/SignUp.png?raw=true)
+  ![Signup](./image/SignUp.png?raw=true)
 
 - **SignIn**
 
-    ![SignIn](./Website%20sneak%20peeks/SignIn.png?raw=true)
+    ![SignIn](./image/SignIn.png?raw=true)
 
-<!-- + - **Track Page** + -->
 
-  <!-- +![Track](./Website%20sneak%20peeks/Track.png?raw=true) + -->
 
 - **Project**
 
-    ![Project](./Website%20sneak%20peeks/Project.png?raw=true)
+    ![Project](./image/Project.png?raw=true)
     
 - **Project Form**
 
-    ![Project](./Website%20sneak%20peeks/ProjectForm.png?raw=true)    
+    ![Project](./image/ProjectForm.png?raw=true)    
     
 - **Client**
 
-    ![Client](./Website%20sneak%20peeks/Client.png?raw=true)    
+    ![Client](./image/Client.png?raw=true)    
 
 - **Clint Form**
 
-    ![Client Form](./Website%20sneak%20peeks/ClientForm.png?raw=true)    
+    ![Client Form](./image/ClientForm.png?raw=true)    
 
 - **Team Members**
 
-    ![Team Members](./Website%20sneak%20peeks/TeamMembers.png?raw=true)    
+    ![Team Members](./image/TeamMembers.png?raw=true)    
 
 - **Team Members Form**
 
-    ![Team Member Form](./Website%20sneak%20peeks/TeamMemberForm.png?raw=true)
+    ![Team Member Form](./image/TeamMemberForm.png?raw=true)
     
 
 - **Footer**
 
-  ![Footer](./Website%20sneak%20peeks/Footer.png?raw=true)
+  ![Footer](./image/Footer.png?raw=true)
