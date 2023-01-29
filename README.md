@@ -1,6 +1,6 @@
 # My Hours Clone
 
-This Single project is a clone of the [MyHours](https://myhours.com) website. I have cloned this website during our Unit 6 construct project week in Masai School, Bangalore.
+This Individua project is a clone of the [MyHours](https://myhours.com) website. I have cloned this website during our Unit 6 construct project week in Masai School, Bangalore.
 
 "My Hours is an Easy tracking of billable hours across various projects. Makes time tracking for different tasks simple."
 
