@@ -27,8 +27,7 @@
 }
 
 .topSection{
-    /* border: 2px solid red; */
-display: flex;
+   display: flex;
 margin-bottom: 1rem !important;
 flex-direction: row !important;
 flex-wrap: wrap !important;
